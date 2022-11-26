@@ -1,0 +1,7 @@
+pytest
+python-dotenv
+Flask
+better-profanity
+flask-wtf
+password-validator
+SQLAlchemy

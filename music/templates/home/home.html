@@ -1,0 +1,19 @@
+{% extends 'layout.html' %} {% block content %}
+<main id="main">
+  <img id="img" src="{{ url_for('static', filename='music_pic.jpg') }}" />
+  
+  <p style="text-align: center; font-style: italic;">
+    Hello this page is an attempt of creating an interactive music page
+    <p><br><p>
+    <ul style="  list-style-type: circle;">
+      <li>Home takes you to the 'Home Page' --> You are on it!!!</li>
+      <li>This web application allows you to register and login</li>
+      <li>Upon registering and logging-in, you can unlock extra features, such as reviewing a track</li>
+      <li>Browse Tracks allows you to search through the database by tracks(alphabetically sorted by track title)</li>
+      <li>Browse Artists allows you to search through the database by artists(alphabetically sorted by artist name)</li>
+      <li>Browse Albums allows you to search through the database by album(sorted by the album's unique id)</li>
+      <li>Browse Genres allows you to search through the database by genre(alphabetically sorted by genre name)</li>
+    </ul>
+  </p>
+</main>
+{% endblock %}

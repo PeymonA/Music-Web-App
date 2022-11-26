@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<main id="main">
+    <header id="track-header">
+        <h1> Track Title: {{ title }}</h1>
+    </header>
+    <div style="clear:both">
+        {% for track in track.comments %}
+            <p>{{track.comment}} <br>Posted by: {{track.user.user_name}} at {{track.timestamp}} </p><br>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

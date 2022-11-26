@@ -1,0 +1,29 @@
+<nav id="nav">
+    <h2 id="nav-header">
+    {% if 'user_name' not in session %} 
+        <p>Login for extra features</p> 
+        </h2>
+        <a class="btn-nav1" href="{{ url_for('home_bp.home') }}">Home<br></a>
+        <a class="btn-nav1" href="{{ url_for('authentication_bp.register') }}">Register</a>
+        <a class="btn-nav1" href="{{ url_for('authentication_bp.login') }}">Login</a>
+        <p class="btn-nav1" btn-nav1>Logout</p>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_tracks') }}">Browse Tracks</a>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_artists') }}">Browse Artists</a>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_album') }}">Browse Albums</a>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_genre') }}">Browse Genres</a>
+    {%endif %}
+    {% if 'user_name' in session %} <p>Hello, {{ session['user_name'] }} </p>
+        </h2>
+        <a class="btn-nav1" href="{{ url_for('home_bp.home') }}">Home<br></a>
+        <p class="btn-nav1" btn-nav1>Register</p>
+        <p class="btn-nav1" btn-nav1>Login</p>
+        <a class="btn-nav1" href="{{ url_for('authentication_bp.logout') }} ">Logout</a>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_tracks') }}">Browse Tracks</a>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_artists') }}">Browse Artists</a>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_album') }}">Browse Albums</a>
+        <a class="btn-nav1" href="{{ url_for('tracks_bp.browse_genre') }}">Browse Genres</a>
+    {%endif %}
+    <div id="nav-footer">
+        <p>Music Web App</p>
+    </div>
+</nav>
